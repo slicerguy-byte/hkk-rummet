@@ -22,6 +22,8 @@
       align-items: center;
       max-width: 1000px;
       margin: 0 auto;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
 
     header img {
@@ -32,6 +34,21 @@
     header h1 {
       margin: 0;
       font-size: 1.8em;
+    }
+
+    nav {
+      max-width: 1000px;
+      margin: 1em auto 0;
+      text-align: center;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 2em;
+      color: white;
+      cursor: pointer;
     }
 
     nav ul {
@@ -47,6 +64,23 @@
       text-decoration: none;
       color: white;
       font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+        display: none;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+        margin: 0 auto;
+      }
     }
 
     main {
@@ -104,6 +138,12 @@
       display: block;
     }
   </style>
+  <script>
+    function toggleMenu() {
+      const navList = document.getElementById("nav-list");
+      navList.classList.toggle("active");
+    }
+  </script>
 </head>
 <body>
   <header>
@@ -112,7 +152,8 @@
       <h1>En portal för Hem- och Konsumentkunskap</h1>
     </div>
     <nav>
-      <ul>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+      <ul id="nav-list">
         <li><a href="#lektioner">Lektionsförslag</a></li>
         <li><a href="#material">Materialbank</a></li>
         <li><a href="#begrepp">Begreppsdatabas</a></li>
