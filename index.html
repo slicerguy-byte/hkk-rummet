@@ -4,55 +4,91 @@
   <meta charset="UTF-8">
   <title>HKK rummet</title>
   <style>
-    body { font-family: sans-serif; margin: 2em; background: #f9f9f9; }
-    header { background: #4CAF50; color: white; padding: 1em; text-align: center; }
-    nav a { margin: 0 1em; text-decoration: none; color: #4CAF50; }
-    section { margin-top: 2em; }
+    body {
+      font-family: sans-serif;
+      margin: 2em;
+      background: #f9f9f9;
+    }
+    header {
+      background: #4CAF50;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      gap: 1em;
+      justify-content: center;
+      margin-top: 1em;
+    }
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+    section {
+      margin-top: 2em;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1em;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.5em;
+      text-align: left;
+    }
   </style>
 </head>
 <body>
   <header>
-    <nav>
-  <ul>
-    <li><a href="#lektioner">Lektionsförslag</a></li>
-    <li><a href="#material">Materialbank</a></li>
-    <li><a href="#begrepp">Begreppsdatabas</a></li>
-    <li><a href="#kontakt">Kontakt</a></li>
-  </ul>
-</nav>
     <h1>En portal för Hem- och Konsumentkunskap</h1>
     <nav>
-      <a href="#lektioner">Lektionsförslag</a>
-      <a href="#material">Materialbank</a>
-      <a href="#begrepp">Begreppsdatabas</a>
+      <ul>
+        <li><a href="#lektioner">Lektionsförslag</a></li>
+        <li><a href="#material">Materialbank</a></li>
+        <li><a href="#begrepp">Begreppsdatabas</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
     </nav>
   </header>
 
- <section id="lektioner">
-  <h2>Lektionsförslag</h2>
-  <p>Här hittar du färdiga lektionsplaner för olika teman inom hem- och konsumentkunskap.</p>
-  <ul>
-    <li><strong>Mat & Näring:</strong> Planera en måltid med näringsberäkning</li>
-    <li><strong>Ekonomi:</strong> Skapa en månadsbudget</li>
-    <li><strong>Konsumenträtt:</strong> Rollspel om reklamation</li>
-  </ul>
-</section>
+  <section id="lektioner">
+    <h2>Lektionsförslag</h2>
+    <p>Här hittar du färdiga lektionsplaner för olika teman inom hem- och konsumentkunskap.</p>
+    <ul>
+      <li><strong>Mat & Näring:</strong> Planera en måltid med näringsberäkning</li>
+      <li><strong>Ekonomi:</strong> Skapa en månadsbudget</li>
+      <li><strong>Konsumenträtt:</strong> Rollspel om reklamation</li>
+    </ul>
+  </section>
 
-<section id="material">
-  <h2>Materialbank</h2>
-  <p>PowerPoints, arbetsblad och checklistor för praktiska moment.</p>
-  <p><a href="https://drive.google.com">Ladda ner material från Google Drive</a></p>
-</section>
+  <section id="material">
+    <h2>Materialbank</h2>
+    <p>PowerPoints, arbetsblad och checklistor för praktiska moment.</p>
+    <ul>
+      <li><a href="https://drive.google.com">Ladda ner material från Google Drive</a></li>
+      <li><a href="#">Checklista för köksmoment (PDF)</a></li>
+      <li><a href="#">PowerPoint: Konsumenträtt</a></li>
+    </ul>
+  </section>
 
-<section id="begrepp">
-  <h2>Begreppsdatabas</h2>
-  <table>
-    <tr><th>Begrepp</th><th>Förklaring</th></tr>
-    <tr><td>Budget</td><td>Planering av inkomster och utgifter</td></tr>
-    <tr><td>Konsumenträtt</td><td>Lagar som skyddar konsumenter</td></tr>
-    <tr><td>Protein</td><td>Byggstenar för kroppens celler</td></tr>
-  </table>
-</section>
-  
+  <section id="begrepp">
+    <h2>Begreppsdatabas</h2>
+    <table>
+      <tr><th>Begrepp</th><th>Förklaring</th></tr>
+      <tr><td>Budget</td><td>Planering av inkomster och utgifter</td></tr>
+      <tr><td>Konsumenträtt</td><td>Lagar som skyddar konsumenter</td></tr>
+      <tr><td>Protein</td><td>Byggstenar för kroppens celler</td></tr>
+    </table>
+  </section>
+
+  <section id="kontakt">
+    <h2>Kontakt</h2>
+    <p>Har du frågor eller vill bidra med material? Mejla mig på <a href="mailto:victor@example.com">victor@example.com</a></p>
+  </section>
 </body>
 </html>
