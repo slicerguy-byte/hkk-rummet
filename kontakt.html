@@ -1,0 +1,33 @@
+<section>
+  <h2>Kontakta oss</h2>
+  <p>Fyll i formuläret nedan för att skicka ett meddelande till oss. Vi svarar så snart vi kan!</p>
+
+  <form id="kontaktForm" onsubmit="return sendEmail()">
+    <label for="namn"><strong>Namn:</strong></label><br>
+    <input type="text" id="namn" name="namn" required style="width: 100%; padding: 0.5em; margin-bottom: 1em;"><br>
+
+    <label for="kategori"><strong>Vad gäller ditt ärende?</strong></label><br>
+    <select id="kategori" name="kategori" required style="width: 100%; padding: 0.5em; margin-bottom: 1em;">
+      <option value="Frågor">Frågor</option>
+      <option value="Tips">Tips</option>
+    </select><br>
+
+    <label for="meddelande"><strong>Meddelande:</strong></label><br>
+    <textarea id="meddelande" name="meddelande" rows="6" required style="width: 100%; padding: 0.5em; margin-bottom: 1em;"></textarea><br>
+
+    <button type="submit" class="quiz-button">Skicka</button>
+  </form>
+</section>
+
+<script>
+  function sendEmail() {
+    const namn = document.getElementById("namn").value;
+    const kategori = document.getElementById("kategori").value;
+    const meddelande = document.getElementById("meddelande").value;
+
+    const mailtoLink = `mailto:kontakt@kontakt.com?subject=${encodeURIComponent(kategori + " från " + namn)}&body=${encodeURIComponent(meddelande)}`;
+
+    window.location.href = mailtoLink;
+    return false; // Förhindrar att formuläret skickas på vanligt sätt
+  }
+</script>
