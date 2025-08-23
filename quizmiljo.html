@@ -52,6 +52,15 @@
       background-color: #388e3c;
     }
 
+    body.quizmiljo .back-button {
+      background-color: #607d8b;
+      margin-top: 40px;
+    }
+
+    body.quizmiljo .back-button:hover {
+      background-color: #455a64;
+    }
+
     body.quizmiljo footer {
       text-align: center;
       margin-top: 40px;
@@ -70,6 +79,7 @@
       <button class="quiz-button" onclick="loadQuiz('klimat')">♻️ Klimatförändringar</button>
       <button class="quiz-button" onclick="loadQuiz('återvinning')">🗑️ Återvinning</button>
       <button class="quiz-button" onclick="loadQuiz('hållbarhet')">🌱 Hållbar livsstil</button>
+      <button class="quiz-button back-button" onclick="goBack()">⬅️ Tillbaka till Kategorier</button>
     </section>
   </main>
 
@@ -80,6 +90,10 @@
   <script>
     function loadQuiz(topic) {
       window.location.href = `quiz-${topic}.html`;
+    }
+
+    function goBack() {
+      window.location.href = 'quiz.html';
     }
   </script>
 </body>
