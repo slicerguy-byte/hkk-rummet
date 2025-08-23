@@ -1,22 +1,11 @@
 <section>
-  <h2>Quiz: Konsumentkunskap</h2>
-  <form>
-    <p><strong>1. Vad betyder öppet köp?</strong></p>
-    <label><input type="radio" name="q1"> Du får pengarna tillbaka om du ångrar dig</label><br>
-    <label><input type="radio" name="q1"> Du får byta till en annan vara</label><br>
-    <label><input type="radio" name="q1"> Du får en rabatt</label>
+  <h2>Välj quizkategori</h2>
+  <p>Här kan du välja vilken typ av quiz du vill göra. Klicka på en kategori för att komma vidare.</p>
 
-    <p><strong>2. Vad är reklamation?</strong></p>
-    <label><input type="radio" name="q2"> Att klaga på en vara som är trasig</label><br>
-    <label><input type="radio" name="q2"> Att köpa något på rea</label><br>
-    <label><input type="radio" name="q2"> Att få en garanti</label>
-
-    <p><strong>3. Vad är en budget?</strong></p>
-    <label><input type="radio" name="q3"> En plan för inkomster och utgifter</label><br>
-    <label><input type="radio" name="q3"> Ett kvitto</label><br>
-    <label><input type="radio" name="q3"> Ett lån</label>
-
-    <br><br>
-    <button type="submit" class="quiz-button">Skicka in svar</button>
-  </form>
+  <div style="display: flex; flex-wrap: wrap; gap: 1em; margin-top: 1em;">
+    <button onclick="loadPage('quizekonomi.html')" class="quiz-button">Privatekonomi</button>
+    <button onclick="loadPage('quizmat.html')" class="quiz-button">Matlagning och bakning</button>
+    <button onclick="loadPage('quizmiljo.html')" class="quiz-button">Miljö</button>
+    <button onclick="loadPage('quizreklam.html')" class="quiz-button">Reklam och media</button>
+  </div>
 </section>
