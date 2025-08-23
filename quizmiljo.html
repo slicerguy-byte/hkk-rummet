@@ -5,6 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Miljöquiz</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8f5;
+      margin: 0;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #2e7d32;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #555;
+    }
+
+    .quiz-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .quiz-button {
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      max-width: 400px;
+      transition: background-color 0.3s ease;
+    }
+
+    .quiz-button:hover {
+      background-color: #388e3c;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #888;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -14,20 +67,9 @@
 
   <main>
     <section class="quiz-list">
-      <article class="quiz-card" onclick="loadQuiz('klimat')">
-        <h2>♻️ Klimatförändringar</h2>
-        <p>Hur mycket vet du om växthuseffekten och globala utsläpp?</p>
-      </article>
-
-      <article class="quiz-card" onclick="loadQuiz('återvinning')">
-        <h2>🗑️ Återvinning</h2>
-        <p>Testa dina kunskaper om sortering och återvinningssystem.</p>
-      </article>
-
-      <article class="quiz-card" onclick="loadQuiz('hållbarhet')">
-        <h2>🌱 Hållbar livsstil</h2>
-        <p>Vad innebär det att leva hållbart i vardagen?</p>
-      </article>
+      <button class="quiz-button" onclick="loadQuiz('klimat')">♻️ Klimatförändringar</button>
+      <button class="quiz-button" onclick="loadQuiz('återvinning')">🗑️ Återvinning</button>
+      <button class="quiz-button" onclick="loadQuiz('hållbarhet')">🌱 Hållbar livsstil</button>
     </section>
   </main>
 
@@ -37,7 +79,6 @@
 
   <script>
     function loadQuiz(topic) {
-      // Här laddar du quiz-innehållet dynamiskt, t.ex. via fetch eller SPA-router
       window.location.href = `quiz-${topic}.html`;
     }
   </script>
