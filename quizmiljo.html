@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Miljöquiz</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>🌍 Miljöquiz</h1>
+    <p>Välj ett quiz för att testa dina kunskaper om miljö och hållbarhet.</p>
+  </header>
+
+  <main>
+    <section class="quiz-list">
+      <article class="quiz-card" onclick="loadQuiz('klimat')">
+        <h2>♻️ Klimatförändringar</h2>
+        <p>Hur mycket vet du om växthuseffekten och globala utsläpp?</p>
+      </article>
+
+      <article class="quiz-card" onclick="loadQuiz('återvinning')">
+        <h2>🗑️ Återvinning</h2>
+        <p>Testa dina kunskaper om sortering och återvinningssystem.</p>
+      </article>
+
+      <article class="quiz-card" onclick="loadQuiz('hållbarhet')">
+        <h2>🌱 Hållbar livsstil</h2>
+        <p>Vad innebär det att leva hållbart i vardagen?</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MiljöQuiz AB</p>
+  </footer>
+
+  <script>
+    function loadQuiz(topic) {
+      // Här laddar du quiz-innehållet dynamiskt, t.ex. via fetch eller SPA-router
+      window.location.href = `quiz-${topic}.html`;
+    }
+  </script>
+</body>
+</html>
