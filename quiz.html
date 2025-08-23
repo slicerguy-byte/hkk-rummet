@@ -1,38 +1,22 @@
-<!DOCTYPE html>
-<html lang="sv">
-<head>
-  <meta charset="UTF-8">
-  <title>Quiz – Materialbank</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Din vanliga CSS -->
-</head>
-<body>
-  <header>
-    <!-- Din vanliga meny här -->
-    <nav>
-      <ul>
-        <li><a href="index.html">Start</a></li>
-        <li><a href="materialbank.html">Materialbank</a></li>
-        <li><a href="quiz.html" class="active">Quiz</a></li>
-        <!-- Lägg till fler länkar vid behov -->
-      </ul>
-    </nav>
-  </header>
+<section>
+  <h2>Quiz: Konsumentkunskap</h2>
+  <form>
+    <p><strong>1. Vad betyder öppet köp?</strong></p>
+    <label><input type="radio" name="q1"> Du får pengarna tillbaka om du ångrar dig</label><br>
+    <label><input type="radio" name="q1"> Du får byta till en annan vara</label><br>
+    <label><input type="radio" name="q1"> Du får en rabatt</label>
 
-  <main>
-    <section class="content-box">
-      <h2>Kategorier</h2>
-      <div class="quiz-categories">
-        <button onclick="location.href='matlagning.html'">Matlagning och bakning</button>
-        <button onclick="location.href='privatekonomi.html'">Privatekonomi</button>
-        <button onclick="location.href='miljo.html'">Miljö</button>
-        <button onclick="location.href='reklam.html'">Reklam och media</button>
-      </div>
-    </section>
-  </main>
+    <p><strong>2. Vad är reklamation?</strong></p>
+    <label><input type="radio" name="q2"> Att klaga på en vara som är trasig</label><br>
+    <label><input type="radio" name="q2"> Att köpa något på rea</label><br>
+    <label><input type="radio" name="q2"> Att få en garanti</label>
 
-  <footer>
-    <!-- Din vanliga footer här -->
-    <p>&copy; 2025 Din hemsida</p>
-  </footer>
-</body>
-</html>
+    <p><strong>3. Vad är en budget?</strong></p>
+    <label><input type="radio" name="q3"> En plan för inkomster och utgifter</label><br>
+    <label><input type="radio" name="q3"> Ett kvitto</label><br>
+    <label><input type="radio" name="q3"> Ett lån</label>
+
+    <br><br>
+    <button type="submit" class="quiz-button">Skicka in svar</button>
+  </form>
+</section>
